@@ -23,6 +23,7 @@
 }
 
 .list-wrapper {
+  width: 50rem;
 	overflow: hidden;
 	@include wrap-background;
 	@include check-icon;
@@ -64,20 +65,14 @@
 			}
 
 			&:nth-of-type(2) {
-				flex: 5;
+				flex: 2;
 			}
 
 			&:nth-of-type(3) {
 				flex: 3;
 			}
 
-			&:nth-of-type(4) {
-				flex: 2;
-			}
 
-			&:nth-of-type(5) {
-				flex: 4;
-			}
 
 		}
 

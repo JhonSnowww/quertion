@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div ref="chart" style="width: 600px; height: 500px; margin-top: 20px"></div>
+    <div ref="chart" style="width: 350px; height: 300px;margin-left: 42px"></div>
   </div>
 </template>
 
@@ -30,13 +30,13 @@ export default {
             {name: '财务动机', max: 20, min: 0},
             {name: '表彰和称赞', max: 20, min: 0},
             {name: '责任', max: 20, min: 0},
-            {name: '和你的经理的关系', max: 20, min: 0},
+            {name: '和经理的关系', max: 20, min: 0},
             {name: '升职', max: 20, min: 0},
             {name: '工作上的成就', max: 20, min: 0},
             {name: '工作内容——工作的本身', max: 20, min: 0},
             {name: '人际和谐', max: 20, min: 0},
           ],
-          radius: 200,
+          radius: 95,
           startAngle: 0,
           splitNumber: 5,
           triggerEvent: true,
@@ -87,4 +87,10 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  max-width: 100%;
+  width: 100rem;
+  margin: 6rem auto;
+  color: #555;
+}
 </style>

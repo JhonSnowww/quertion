@@ -12,7 +12,7 @@ export default {
   name: 'App',
   components: {
   	vHeader
-  }
+  },
 }
 </script>
 
@@ -20,7 +20,7 @@ export default {
 @import "style/reset";
 
 #app {
-  min-width: 110rem;
+  max-width: 100%;
   height: 100%;
   font-family: arial;
   background-color: #efefef;

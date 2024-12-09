@@ -3,14 +3,13 @@
     <div class="qu-wrap">
       <div>
         <header>
-          <span @click="iterator = backBtn(); iterator.next()">&lt; 返回</span>
-          <h1 style="display: inline-block; white-space: pre-wrap; font-weight: bold;">
-            分析你工作上的动力
-            以下的资料是用来分析你工作上的动力。
-            对于每一对声明，你都有5分去分配，以表示你对它们的重视程度。你的 重量分配应该表示你对每一个问题在互相比较的情形下所作出的衡量。
-            这 5 分必须依照以下其中的一个方式分配：
+          <h1 style="display: inline-block;  font-weight: bold; margin: 0;padding: 0">
+            分析你工作上的动力<br>
+            以下的资料是用来分析你工作上的动力。<br>
+            对于每一对声明，你都有5分去分配，以表示你对它们的重视程度。你的 重量分配应该表示你对每一个问题在互相比较的情形下所作出的衡量。<br>
+            这 5 分必须依照以下其中的一个方式分配：<br>
             5—0     4—1      3—2     2—3     1—4      0—5
-            你不可以用半分的分值数目。
+            你不可以用半分的分值数目。<br>
             这个作业应该在很自然以及快速的情形下进行，请记得需要的是你自己的 意见而不是他人的。
           </h1>
         </header>
@@ -18,11 +17,11 @@
 
       <div class="qu-content">
         <div class="qu-item" v-for="(group, groupIndex) in groupedItems" :key="groupIndex">
-          <div style="display: flex; align-items: center;">
-            <h3 style="margin-right: 10px;">
+          <div style="display: flex; align-items: center;height: auto">
+            <dev style="margin-right: 10px;">
               {{ `Q${groupIndex * 2 + 1}:&nbsp;&nbsp;&nbsp;${group[0].topic}` }}
               <span v-if="group[0].isMandatory"> *</span>
-            </h3>
+            </dev>
             <div style="flex: 1;"></div>
             <input type="number" min="0" max="5"
                    v-model="group[0].answer"
@@ -30,11 +29,11 @@
                    @input="validateGroup(group)"
                    style="font-size: 16px;">
           </div>
-          <div style="display: flex; align-items: center;">
-            <h3 style="margin-right: 10px;">
+          <div style="display: flex; align-items: center; ;height: auto">
+            <dev style="margin-right: 10px;">
               {{ `Q${groupIndex * 2 + 2}:&nbsp;&nbsp;&nbsp;${group[1].topic}` }}
               <span v-if="group[1].isMandatory"> *</span>
-            </h3>
+            </dev>
             <div style="flex: 1;"></div>
             <input type="number" min="0" max="5"
                    v-model="group[1].answer"
@@ -231,7 +230,8 @@ export default {
 <style scoped lang="scss">
 @import '../style/_Fill.scss';
 .container {
-  padding: 10px;
+  max-width: 100%;
+  padding: 5px;
   font-size: 14px;
 }
 
@@ -264,19 +264,4 @@ footer {
   /* 提示框样式 */
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 5px;
-    font-size: 12px;
-  }
-
-  h3 {
-    font-size: 14px;
-  }
-
-  input[type="number"] {
-    font-size: 12px;
-    width: 40px;
-  }
-}
 </style>

@@ -15,6 +15,7 @@
   "dependencies": {
     "chart.js": "^4.4.6",
     "echarts": "^4.0.4",
+    "lodash": "^4.17.21",
     "sass": "^1.80.7",
     "vue": "^2.5.2",
     "vue-chartjs": "^5.3.2",

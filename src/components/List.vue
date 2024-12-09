@@ -1,32 +1,16 @@
 <template>
-	<div class="container">
-		<div class="add-wrapper" v-if="!quList.length">
+  <div class="container">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+
+    <div class="add-wrapper" v-if="!quList.length">
 			<p @click="$router.push({name: 'Edit', params: {id: 0}})">+ 新建问卷</p>
 		</div>
 		<div class="list-wrapper" v-else>
-<!--			<ul>-->
-<!--				<li></li>-->
-<!--				<li>标题</li>-->
-<!--				<li>截止时间</li>-->
-<!--				<li>状态</li>-->
-<!--				<li>操作<p @click="$router.push({name: 'Edit', params: {id: 0}})">+ 新建问卷</p></li>-->
-<!--			</ul>-->
 			<ul v-for="item in quList">
 				<li @click="checkItem(item)"><i :class="{'checked': item.checked}"></i></li>
 				<li v-text="item.title"></li>
-<!--				<li v-text="item.time"></li>-->
-<!--				<li v-text="item.stateName" :class="{'releasing': (item.state === 1)}"></li>-->
-				<li>
-					<router-link tag="span" :to="`/fill/${item.id}`">查看问卷</router-link>
-<!--					<span v-if="!item.state" @click="iterator = editItem(item); iterator.next()">编辑</span>-->
-<!--					<router-link tag="span" v-else :to="`/data/${item.id}`">查看数据</router-link>-->
-<!--					<span @click="iterator = deleteItem(item); iterator.next()">删除</span>-->
-				</li>
+				<li><router-link tag="span" :to="`/fill/${item.id}`">查看问卷</router-link></li>
 			</ul>
-<!--			<div>-->
-<!--				<p @click="checkAll(isCheckedAll)"><i :class="{'checked': isCheckedAll}"></i></p>-->
-<!--				<p>全选<span @click="iterator = deleteCheckedItems(); iterator.next()">删除</span></p>-->
-<!--			</div>-->
 		</div>
 		<div class="overlay" v-show="isShowPrompt">
 			<div class="prompt-box">
