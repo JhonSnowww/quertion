@@ -5,7 +5,7 @@
 var list = [
 		{
 			"id": 1,
-			"title": "问卷调查1",
+			"title": "动力测试",
 			"state": 1,
 			"stateName": "发布中",
 			"time": "2020-07-01",
@@ -462,7 +462,7 @@ var list = [
 		},
 		{
 			"id": 2,
-			"title": "问卷调查2",
+			"title": "管理风格测试",
 			"state": 1,
 			"stateName": "未发布",
 			"time": "2020-09-01",

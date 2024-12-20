@@ -2,6 +2,7 @@
   <div v-if="visible" class="modal-overlay" @click.self="close">
     <div class="modal-content">
       <slot></slot> <!-- 用于插入内容 -->
+
     </div>
   </div>
 </template>
