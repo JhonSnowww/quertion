@@ -6,6 +6,7 @@ import Data from '@/components/Data'
 import Edit from '@/components/Edit'
 import Datepicker from '@/components/Datepicker'
 import Result from "@/components/result";
+import SurveyQuestion from "@/components/SurveyQuestion";
 
 Vue.use(Router)
 
@@ -17,9 +18,14 @@ export default new Router({
       component: List
     },
     {
-      path: '/fill/:id',
+      path: '/fill',
       name: 'Fill',
       component: Fill
+    },
+    {
+      path: '/SurveyQuestion',
+      name: 'SurveyQuestion',
+      component: SurveyQuestion
     },
     {
       path: '/data/:id',

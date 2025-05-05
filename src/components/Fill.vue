@@ -125,9 +125,10 @@ export default {
 
   methods: {
     getData() {
-      let id = this.$route.params.id;
+      let id = 1
 
       this.quData = data.list[id - 1];
+
       this.questions = this.quData.questions;
       this.questions.forEach((item) => {
         if (item.type === 'checkbox') {

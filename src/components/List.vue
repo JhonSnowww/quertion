@@ -6,11 +6,14 @@
 			<p @click="$router.push({name: 'Edit', params: {id: 0}})">+ 新建问卷</p>
 		</div>
 		<div class="list-wrapper" v-else>
-			<ul v-for="item in quList">
-				<li @click="checkItem(item)"><i :class="{'checked': item.checked}"></i></li>
-				<li v-text="item.title"></li>
-				<li><router-link tag="span" :to="`/fill/${item.id}`">查看问卷</router-link></li>
+			<ul>
+				<li>动力测试</li>
+				<li><router-link tag="span" :to="`/fill`">查看问卷</router-link></li>
 			</ul>
+      <ul>
+        <li>自我领导风格评测</li>
+        <li><router-link tag="span" :to="`/SurveyQuestion`">查看问卷</router-link></li>
+      </ul>
 		</div>
 		<div class="overlay" v-show="isShowPrompt">
 			<div class="prompt-box">
